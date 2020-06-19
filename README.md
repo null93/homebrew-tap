@@ -17,6 +17,7 @@ brew tap null93/tap
 
 ## Available Formulas
 
-|  Formula |           Install           |
-|:--------:|:---------------------------:|
-|  tillns  |  ```brew install tillns```  |
+|   Formula   |            Install             |
+|:-----------:|:------------------------------:|
+|   tillns    |   ```brew install tillns```    |
+| kube-switch | ```brew install kube-switch``` |
