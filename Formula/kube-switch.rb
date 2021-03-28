@@ -2,12 +2,16 @@ class KubeSwitch < Formula
 
 	desc "Switch between Kubernetes context & namespace using an interactive menu."
 	homepage "https://github.com/null93/kube-switch"
-	url "https://github.com/null93/kube-switch/releases/download/1.1.0/kube-switch"
-	sha256 "03592385fb6d8350be6a6406929f5c2109cf2a32d0056016145807724ec8b027"
-	version "1.1.0"
+	url "https://github.com/null93/kube-switch/releases/download/2.0.0/kube-switch-2.0.0-darwin.tar.gz"
+	sha256 "7fca6886aa37772d795f07b45ccd7ca0c89805ce8e50041be9dfe8291ea19cd7"
+	version "2.0.0"
 
 	def install
-		bin.install "kube-switch"
+		bin.install "kube-switch_darwin_amd64" => "kube-switch"
+	end
+
+	test do
+		system "#{bin}/kube-switch", "-v"
 	end
 
 	def caveats
