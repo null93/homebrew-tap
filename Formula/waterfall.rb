@@ -5,20 +5,20 @@
 class Waterfall < Formula
   desc "Cloudformation CLI tool to analyze and visualize stack events as a waterfall diagram"
   homepage "https://github.com/null93/waterfall"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_darwin_arm64.tar.gz"
-      sha256 "d45c886655418d19bbf3a49ad1a870d0f4bc1d5f0b20896840670826b2ae5906"
+      url "https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_darwin_arm64.tar.gz"
+      sha256 "b8d1a244fb4db2d0e4812ccecb53afb9baa6ecaacee56930d470b35a315adc72"
 
       def install
         bin.install "waterfall"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_darwin_amd64.tar.gz"
-      sha256 "f0169c2ce61f5200b3752bae8cb20d29543b56144e8144b6d951ea6921c69175"
+      url "https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_darwin_amd64.tar.gz"
+      sha256 "4ca951d3d17428a340eca8d815111fe904542cd7f3aeb9307956cf0666d7c054"
 
       def install
         bin.install "waterfall"
@@ -28,16 +28,16 @@ class Waterfall < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_linux_arm64.tar.gz"
-      sha256 "a11bf8c1ce32df1ed6c68640913025d7a7ed0710058dde6b6e165d6221090173"
+      url "https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_linux_arm64.tar.gz"
+      sha256 "31d1fbabfd3f6c8035a4afb6c50c6c6a58e9376d7105a0608e1a7d3698af46a4"
 
       def install
         bin.install "waterfall"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_linux_amd64.tar.gz"
-      sha256 "b978943a1829098d6066e50b261c6127c067873a043f392f49f5b759111910c8"
+      url "https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_linux_amd64.tar.gz"
+      sha256 "805ac71561391e040af9b53353422e471ca968e8a33627f8df3edd595cec94e9"
 
       def install
         bin.install "waterfall"
