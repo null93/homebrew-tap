@@ -5,20 +5,20 @@
 class Vhost < Formula
   desc "NGINX config structure for provisioning virtual hosts with a CLI tool"
   homepage "https://github.com/null93/vhost"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/null93/vhost/releases/download/0.0.1/vhost_0.0.1_darwin_arm64.tar.gz"
-      sha256 "9091ed5569240645de8b0189d97a4fd59a4cd55958c970e6b4f121542ce95ff4"
+      url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_darwin_arm64.tar.gz"
+      sha256 "84863b71d706370e5b2c65d6ea283195aed75343b2143543158afabb362d7594"
 
       def install
         bin.install "vhost"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/null93/vhost/releases/download/0.0.1/vhost_0.0.1_darwin_amd64.tar.gz"
-      sha256 "e032828e41ef98226ae5425f65257cefb8eff4046af49bc2b6c27d11ef3b5775"
+      url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_darwin_amd64.tar.gz"
+      sha256 "a914a0c522170904f4c14a0d7660949d73e8e1a754f58558798f785ae0dea6b0"
 
       def install
         bin.install "vhost"
@@ -28,16 +28,16 @@ class Vhost < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/null93/vhost/releases/download/0.0.1/vhost_0.0.1_linux_arm64.tar.gz"
-      sha256 "1784a8ec4e71460f146632eb2bb44d49dca0065bd11947f6ab7c8f38baa4791b"
+      url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_linux_arm64.tar.gz"
+      sha256 "1423c28b16ff6b34e536427b1616d17a013b559069524553e044628fc13a768c"
 
       def install
         bin.install "vhost"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/null93/vhost/releases/download/0.0.1/vhost_0.0.1_linux_amd64.tar.gz"
-      sha256 "239c69a9bfe5abb27dd6e63128c6ee340ffbc62f2e469c42fc1612290cce5531"
+      url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_linux_amd64.tar.gz"
+      sha256 "a61e58a294b264bf0583a0bff6a55e3e2635b09ba69cdc6b7f2b4d261cd2cf26"
 
       def install
         bin.install "vhost"
