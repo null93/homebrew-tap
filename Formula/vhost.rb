@@ -10,7 +10,7 @@ class Vhost < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_darwin_arm64.tar.gz"
-      sha256 "84863b71d706370e5b2c65d6ea283195aed75343b2143543158afabb362d7594"
+      sha256 "6a9600b44466ee7615bdb6eb1569210a987aa074fea27cfc570ad41210205d92"
 
       def install
         bin.install "vhost"
@@ -18,7 +18,7 @@ class Vhost < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_darwin_amd64.tar.gz"
-      sha256 "a914a0c522170904f4c14a0d7660949d73e8e1a754f58558798f785ae0dea6b0"
+      sha256 "a20f33105ec7f786c3eeb49fab853734a675b6413c5778dc969dace11325c19a"
 
       def install
         bin.install "vhost"
@@ -29,7 +29,7 @@ class Vhost < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_linux_arm64.tar.gz"
-      sha256 "1423c28b16ff6b34e536427b1616d17a013b559069524553e044628fc13a768c"
+      sha256 "e337dd9be114ec415701f2d77a0f3f54a64b803112340bb21a2ca33da53f5cc7"
 
       def install
         bin.install "vhost"
@@ -37,7 +37,7 @@ class Vhost < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/null93/vhost/releases/download/0.0.2/vhost_0.0.2_linux_amd64.tar.gz"
-      sha256 "a61e58a294b264bf0583a0bff6a55e3e2635b09ba69cdc6b7f2b4d261cd2cf26"
+      sha256 "f3cdaa1206c9a9a0bd021306d0d992b253cc236a6c4befd113cf637ec8817790"
 
       def install
         bin.install "vhost"
