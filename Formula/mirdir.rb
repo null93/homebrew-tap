@@ -5,20 +5,20 @@
 class Mirdir < Formula
   desc "CLI tool that mirrors and templates a directory structure"
   homepage "https://github.com/null93/mirdir"
-  version "0.0.1"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/null93/mirdir/releases/download/0.0.1/mirdir_0.0.1_darwin_arm64.tar.gz"
-      sha256 "3cab1643b6ee4d8059d55057b82adb3716efa5a07ac043ba232ab981e49a8740"
+      url "https://github.com/null93/mirdir/releases/download/0.1.0/mirdir_0.1.0_darwin_arm64.tar.gz"
+      sha256 "3ce88da9256d63dc4f7e9e18dd7cb80c13650e704385e63d6921aed77a422b41"
 
       def install
         bin.install "mirdir"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/null93/mirdir/releases/download/0.0.1/mirdir_0.0.1_darwin_amd64.tar.gz"
-      sha256 "9e79cfe965f06d07dbb088272d4ce094406a4af5da232096d2b45bdb35394b45"
+      url "https://github.com/null93/mirdir/releases/download/0.1.0/mirdir_0.1.0_darwin_amd64.tar.gz"
+      sha256 "39ffd5d077fa4a7672e6a27f6c6795b78efe58b2eeb4e7a98c08518a64f6d7dc"
 
       def install
         bin.install "mirdir"
@@ -28,16 +28,16 @@ class Mirdir < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/null93/mirdir/releases/download/0.0.1/mirdir_0.0.1_linux_arm64.tar.gz"
-      sha256 "25b61f2e5b623ba7f20a5012730d6e37f152c5fa4df4090e07e6060c3a8fffa8"
+      url "https://github.com/null93/mirdir/releases/download/0.1.0/mirdir_0.1.0_linux_arm64.tar.gz"
+      sha256 "b0f10f37e71ef6bb38413027ab8c33f5d2bee6c898a10b48a8dfb244f8a774f1"
 
       def install
         bin.install "mirdir"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/null93/mirdir/releases/download/0.0.1/mirdir_0.0.1_linux_amd64.tar.gz"
-      sha256 "125248f600887e1cdebee59f4fc92efd6ee79344b32a3c9d7d6fa8a0c044f5bd"
+      url "https://github.com/null93/mirdir/releases/download/0.1.0/mirdir_0.1.0_linux_amd64.tar.gz"
+      sha256 "bb2e591e8a3ebb4a2e69a6257515e1d73a581c1f16073e6667cdcc253cc1903c"
 
       def install
         bin.install "mirdir"
