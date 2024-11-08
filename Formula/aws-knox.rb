@@ -5,20 +5,20 @@
 class AwsKnox < Formula
   desc "AWS credential process helper"
   homepage "https://github.com/null93/aws-knox"
-  version "3.1.0"
+  version "3.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/null93/aws-knox/releases/download/3.1.0/aws-knox_3.1.0_darwin_amd64.tar.gz"
-      sha256 "e7407501d67bc63a15d30b66c551a746bb158015256264a1738136a4c55f431f"
+      url "https://github.com/null93/aws-knox/releases/download/3.1.1/aws-knox_3.1.1_darwin_amd64.tar.gz"
+      sha256 "c08312fd86c2041b0c5b70315a86be1ee6c2247c0abb480782d65755bfd35efa"
 
       def install
         bin.install "knox"
       end
     end
     on_arm do
-      url "https://github.com/null93/aws-knox/releases/download/3.1.0/aws-knox_3.1.0_darwin_arm64.tar.gz"
-      sha256 "cc5e140b0e4ca94a4a913305fb57fd325180ec9a864e2098cb0dd9d147b9f4b8"
+      url "https://github.com/null93/aws-knox/releases/download/3.1.1/aws-knox_3.1.1_darwin_arm64.tar.gz"
+      sha256 "fa341138575f7e0dfea38028a837108c87d24688a238add7b0eda87a4c09c063"
 
       def install
         bin.install "knox"
@@ -29,8 +29,8 @@ class AwsKnox < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/null93/aws-knox/releases/download/3.1.0/aws-knox_3.1.0_linux_amd64.tar.gz"
-        sha256 "151b924f2579566a96d47649c3c6dc2147d308e01068e7dc70190e71483ace78"
+        url "https://github.com/null93/aws-knox/releases/download/3.1.1/aws-knox_3.1.1_linux_amd64.tar.gz"
+        sha256 "f19000306b3cfdcd6cf00d74c4c6f009149db4e3c1b2fd621c4ed7912a2faad1"
 
         def install
           bin.install "knox"
@@ -39,8 +39,8 @@ class AwsKnox < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/null93/aws-knox/releases/download/3.1.0/aws-knox_3.1.0_linux_arm64.tar.gz"
-        sha256 "d2afd42cd50b8888b0e83f25fc843eac4b2b07321c78567648690b70a561a4e4"
+        url "https://github.com/null93/aws-knox/releases/download/3.1.1/aws-knox_3.1.1_linux_arm64.tar.gz"
+        sha256 "9e698b4132af11486294e162b40e830af3bb5409d612a55a055d50c1f4bdecd2"
 
         def install
           bin.install "knox"
