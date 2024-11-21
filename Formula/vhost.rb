@@ -5,20 +5,20 @@
 class Vhost < Formula
   desc "NGINX config structure for provisioning virtual hosts with a CLI tool"
   homepage "https://github.com/null93/vhost"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/null93/vhost/releases/download/0.0.3/vhost_0.0.3_darwin_arm64.tar.gz"
-      sha256 "5ac27ad114e5b7deaa32ba704c07c4d16971b68e5abf32871b1126d27859d333"
+    on_intel do
+      url "https://github.com/null93/vhost/releases/download/0.0.4/vhost_0.0.4_darwin_amd64.tar.gz"
+      sha256 "940f9c8808801954f1d8d29965e3516291a7eebdd47482d90e8b0bac27144527"
 
       def install
         bin.install "vhost"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/null93/vhost/releases/download/0.0.3/vhost_0.0.3_darwin_amd64.tar.gz"
-      sha256 "3ba55f6b76cb9f36e3be863b783ba2329f47bd802d3144bac728c82801131b73"
+    on_arm do
+      url "https://github.com/null93/vhost/releases/download/0.0.4/vhost_0.0.4_darwin_arm64.tar.gz"
+      sha256 "d5f9edced3e20ed1d74d8c6eaaf7ab1ad13b37c1ac4f63a09a8ec0298e275bd8"
 
       def install
         bin.install "vhost"
@@ -27,20 +27,24 @@ class Vhost < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/null93/vhost/releases/download/0.0.3/vhost_0.0.3_linux_arm64.tar.gz"
-      sha256 "cd93003c38478feeba4a4cc88cf538fc9404599c46172872998d20796594bb03"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/null93/vhost/releases/download/0.0.4/vhost_0.0.4_linux_amd64.tar.gz"
+        sha256 "a176eaaf60fb305f5be06853d9227e2d380d809851e009853fc21d3060b77b4b"
 
-      def install
-        bin.install "vhost"
+        def install
+          bin.install "vhost"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/null93/vhost/releases/download/0.0.3/vhost_0.0.3_linux_amd64.tar.gz"
-      sha256 "4161a6adc90cb72da8fe45829e09899c71bd2fcefb3bda657695783a684d57af"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/null93/vhost/releases/download/0.0.4/vhost_0.0.4_linux_arm64.tar.gz"
+        sha256 "c3b37b3fd2bf72b192db63236e9cf43a16f57ed9b66da701e701a6fd39b6653f"
 
-      def install
-        bin.install "vhost"
+        def install
+          bin.install "vhost"
+        end
       end
     end
   end
