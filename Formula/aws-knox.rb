@@ -5,20 +5,20 @@
 class AwsKnox < Formula
   desc "AWS credential process helper"
   homepage "https://github.com/null93/aws-knox"
-  version "3.2.0"
+  version "3.2.1"
 
   on_macos do
-    on_intel do
-      url "https://github.com/null93/aws-knox/releases/download/3.2.0/aws-knox_3.2.0_darwin_amd64.tar.gz"
-      sha256 "33a45bd29f46fa9b0e3bd941a221a26e27ef3e715cf2637a970f715c595bcd49"
+    if Hardware::CPU.intel?
+      url "https://github.com/null93/aws-knox/releases/download/3.2.1/aws-knox_3.2.1_darwin_amd64.tar.gz"
+      sha256 "2fd347e824faefc27924596c004567788d831cc12959ff57869d840b9d85d504"
 
       def install
         bin.install "knox"
       end
     end
-    on_arm do
-      url "https://github.com/null93/aws-knox/releases/download/3.2.0/aws-knox_3.2.0_darwin_arm64.tar.gz"
-      sha256 "0021255f96ba7557f3abf9fd637adfd1d9c1fbb5452af5c9b546b4af6f484a6c"
+    if Hardware::CPU.arm?
+      url "https://github.com/null93/aws-knox/releases/download/3.2.1/aws-knox_3.2.1_darwin_arm64.tar.gz"
+      sha256 "e15a0e4a95151bc2446d9ca8d56275ca00e9776e3e4e05325b8e8a1af65ea009"
 
       def install
         bin.install "knox"
@@ -27,20 +27,20 @@ class AwsKnox < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/null93/aws-knox/releases/download/3.2.0/aws-knox_3.2.0_linux_amd64.tar.gz"
-        sha256 "e795a0bbe60bcb6799218ac6cd874ccb032cb4abf496a5d01b66da96c80c11b7"
+        url "https://github.com/null93/aws-knox/releases/download/3.2.1/aws-knox_3.2.1_linux_amd64.tar.gz"
+        sha256 "a590d8b15aacc629712005d12c44e0e514c5e225f21281af625061b0ee255358"
 
         def install
           bin.install "knox"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/null93/aws-knox/releases/download/3.2.0/aws-knox_3.2.0_linux_arm64.tar.gz"
-        sha256 "b86d007aa774362ee5fc17c33f9674f149f80d31b3a9df2e88c3860b9cbb58e1"
+        url "https://github.com/null93/aws-knox/releases/download/3.2.1/aws-knox_3.2.1_linux_arm64.tar.gz"
+        sha256 "d063139b3afd08266fd00a0793341d5e88b7f5161f272e22bac247525a066b92"
 
         def install
           bin.install "knox"
